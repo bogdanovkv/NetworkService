@@ -16,7 +16,7 @@ public final class NetworkService: NSObject, NetworkServiceProtocol {
 	private let queue: OperationQueue
 	private var downloadCompletions: [String: (Result<URL, Error>) -> Void]
 
-	override init() {
+	public override init() {
 		queue = .init()
 		queue.maxConcurrentOperationCount = 1
 		downloadCompletions = [:]
